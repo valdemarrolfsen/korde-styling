@@ -73,3 +73,25 @@ $button-lg-padding:              15px 60px;
     &:active { background: darken($bg, 5%);}
   }
 }
+
+// Rounded buttons
+@each $item in $mainColors {
+  .button-rounded-#{nth($item,1)} {
+
+    // Local variables
+    $bg: nth($item, 2);
+    $color: nth($item, 3);
+
+    // Custom style
+    background: nth($item, 2);
+    color: nth($item, 3);
+
+    //Rounded style
+    border-radius: 1337px;
+
+    // Other
+    &:hover { background: lighten($bg, 10%); }
+    &:active { background: darken($bg, 5%);}
+  }
+
+}
