@@ -1,0 +1,93 @@
+/* --------------------
+
+KORDE TEXT STYLES
+
+Created by Valdemar Rolfsen 2016
+
+-------------------- */
+
+// Imports
+// -------------------
+
+@import "variables";
+
+// Mobile headings
+
+@media (max-width: $smallMediaSize) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}
+
+// General paragraph style
+// -------------------
+
+p {
+  font-size: 16px;
+}
+
+p.big {
+  font-size: 22px;
+
+  @media (max-width: $smallMediaSize) {
+    font-size: 16px;
+  }
+}
+
+// Font weights
+// -------------------
+
+.t-very-thin {
+  font-weight: 100;
+}
+
+.t-thin {
+  font-weight: 300;
+}
+
+.t-thick {
+  font-weight: 600;
+}
+
+.t-very-thick {
+  font-weight: 800;
+}
+
+// Text position
+// -------------------
+
+.t-center { text-align: center; }
+
+.t-left { text-align: left; }
+
+.t-right { text-align: right; }
+
+// Font sizes
+// -------------------
+
+@for $i from 10 to 100 {
+  .font-size-#{$i} {
+    @media (min-width: $smallMediaSize) {
+     font-size: #{$i}px;
+    }
+  }
+}
+
+// Colors
+// -------------------
+.t-light {
+  color: $light;
+}
+
+.t-dark {
+  color: $dark;
+}
+
+// Other
+.t-upper {
+  text-transform: uppercase;
+}

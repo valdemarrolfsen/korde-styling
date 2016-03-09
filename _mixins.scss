@@ -1,0 +1,16 @@
+/*----------------------------------------
+
+  KORDE - MIXINS
+
+-----------------------------------------*/
+
+// Transitions
+// ----------------------------
+
+@mixin trans($type: all, $time: 500ms) {
+  -webkit-transition: $type $time ease;
+  -moz-transition: $type $time ease;
+  -ms-transition: $type $time ease;
+  -o-transition: $type $time ease;
+  transition: $type $time ease;
+}

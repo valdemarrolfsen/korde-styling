@@ -1,0 +1,21 @@
+/*----------------------------------------
+
+  HEAD MARKET - NAV BARS
+
+-----------------------------------------*/
+
+//Imports
+$hm-positive: rgb(255, 126, 14);
+
+$hm-nav-height                    : 100px;
+$hm-nav-bg                        : $hm-positive;
+
+.hm-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: $hm-nav-height;
+  background: $hm-nav-bg;
+}

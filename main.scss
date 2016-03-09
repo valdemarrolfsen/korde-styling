@@ -1,0 +1,20 @@
+/*----------------------------------------
+
+  KORDE - MAIN
+
+-----------------------------------------*/
+
+@import "variables",
+        "mixins",
+        "buttons",
+        "textstyles",
+        "properties";
+
+
+// General fixes
+
+button {
+  &:focus {
+    outline: none;
+  }
+}

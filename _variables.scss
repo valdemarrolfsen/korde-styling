@@ -1,0 +1,44 @@
+/*----------------------------------------
+
+  KORDE - VARIABLES
+
+-----------------------------------------*/
+
+// Colors
+// -------------------
+
+// Main colors
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$stable_dark:                     #888 !default;
+$accept:                          #23c133 !default;
+$decline:                         #ea3830 !default;
+$action:                          #2abaea !default;
+$warning:                         #ea7807 !default;
+$dark:                            #222 !default;
+
+// List of main colors
+$mainColors: (
+        ('light', $light, $dark),
+        ('stable', $stable, $dark),
+        ('stable_dark', $stable_dark, $light),
+        ('accept', $accept, $light),
+        ('decline', $decline, $light),
+        ('action', $action, $light),
+        ('warning', $warning, $light),
+        ('dark', $dark, $light)
+);
+
+// Media sizes
+// -------------------
+
+$smallMediaSize :                 768px;
+$mediumMediaSize:                 1250px;
+
+// Nav bar
+// -------------------
+
+// Nav bar top
+$small-nav-height:                40px;
+$medium-nav-height:               80px;
+$large-nav-height:                120px;

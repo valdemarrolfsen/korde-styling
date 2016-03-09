@@ -1,0 +1,67 @@
+/*----------------------------------------
+
+  KORDE - BUTTONS
+
+-----------------------------------------*/
+
+// Local mixins
+// -------------------
+
+@mixin button($padding: 10px 40px, $border: 2px solid $light) {
+
+  // Custom style
+  padding: $padding;
+  border: $border;
+
+  @media (max-width: $smallMediaSize) {
+    width: 100%;
+  }
+}
+
+@mixin smoothHover($bg: $light, $color: $dark) {
+  @include smoothBackgroundShift();
+
+  &:hover {
+    background: $bg;
+    color: $color;
+  }
+}
+
+// Buttons
+// -------------------
+
+.button-sm {
+  // Mixins
+  @include button(5px 20px, 0);
+  @include trans(background-color, 200ms);
+}
+
+.button-md {
+  // Mixins
+  @include button(10px 40px, 0);
+  @include trans(background-color, 200ms);
+}
+
+.button-lg {
+  // Mixins
+  @include button(15px 60px, 0);
+  @include trans(background-color, 200ms);
+}
+
+// Simple buttons
+@each $item in $mainColors {
+  .button-#{nth($item, 1)} {
+
+    // Local variables
+    $bg: nth($item, 2);
+    $color: nth($item, 3);
+
+    //Custom style
+    background: nth($item, 2);
+    color: nth($item, 3);
+
+    // Other
+    &:hover { background: lighten($bg, 10%); }
+    &:active { background: darken($bg, 5%);}
+  }
+}
