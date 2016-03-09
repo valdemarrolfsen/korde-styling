@@ -6,11 +6,7 @@ Created by Valdemar Rolfsen 2016
 
 */
 
-// Imports
-@import "mixins",
-        "variables";
-
-// Padding
+// Padding & Margins
 // --------------------
 
 @for $i from 0 to 20 {
@@ -22,22 +18,7 @@ Created by Valdemar Rolfsen 2016
         padding: #{$i*3}px #{$j*3}px;
       }
     }
-  }
-}
 
-.p-top {
-  padding-bottom: 0;
-}
-
-.p-bottom {
-  padding-top: 0;
-}
-
-// Margins
-// --------------------
-
-@for $i from 0 to 10 {
-  @for $j from 0 to 10 {
     .m-#{$i*10}-#{$j*10} {
       margin: #{$i*10}px #{$j*10}px;
 
@@ -48,20 +29,25 @@ Created by Valdemar Rolfsen 2016
   }
 }
 
-.m-top {
-  margin-bottom: 0;
-}
+.p-top { padding-bottom: 0; }
 
-.m-bottom {
-  margin-top: 0;
-}
+.p-bottom { padding-top: 0; }
 
-// Height
+.m-top { margin-bottom: 0; }
+
+.m-bottom { margin-top: 0; }
+
+
+// Height & Width
 // --------------------
 
-@for $i from 1 to 90 {
+@for $i from 1 to 120 {
   .h-#{$i*10} {
     height: #{$i*10}px;
+
+    .w-#{$i*10} {
+      max-width: #{$i*10}px;
+    }
   }
 }
 
@@ -69,36 +55,14 @@ Created by Valdemar Rolfsen 2016
   .h-#{$i*10}-p {
     height: $i*10%;
   }
+
+  .w-#{$i*10}-p {
+    width: $i*10%;
+  }
 }
 
 .h-fill {
   height: 100%;
-}
-
-.row-fill {
-  width: 100%;
-  margin: 0;
-  display: table;
-}
-
-.col-fill {
-  float: none;
-    display: table-cell;
-}
-
-// Width
-// --------------------
-
-@for $i from 1 to 120 {
-  .w-#{$i*10} {
-    max-width: #{$i*10}px;
-  }
-}
-
-@for $i from 1 to 11 {
-  .w-#{$i*10}-p {
-    width: $i*10%;
-  }
 }
 
 .w-fill {
@@ -159,7 +123,7 @@ Created by Valdemar Rolfsen 2016
 }
 
 @media (max-width: $smallMediaSize) {
-  .hide-on-mobile {
+  .hide-mobile {
     display: none;
   }
   .on-mobile {
