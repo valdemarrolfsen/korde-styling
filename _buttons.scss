@@ -74,24 +74,34 @@ $button-lg-padding:              15px 60px;
   }
 }
 
-// Rounded buttons
+// Gradient buttons
 @each $item in $mainColors {
-  .button-rounded-#{nth($item,1)} {
+  .button-grad-#{nth($item, 1)} {
 
     // Local variables
     $bg: nth($item, 2);
     $color: nth($item, 3);
 
     // Custom style
-    background: nth($item, 2);
     color: nth($item, 3);
 
-    //Rounded style
-    border-radius: 1337px;
+    // Local mixins
+    @include grad-down($bg, darken($bg, 10%));
 
     // Other
-    &:hover { background: lighten($bg, 10%); }
-    &:active { background: darken($bg, 5%);}
+    &:active { @include grad-down(darken($bg, 10%), $bg);}
   }
-
 }
+
+// Rounded buttons
+.button-rounded {
+  //Rounded style
+  border-radius: 1337px;
+}
+
+// Button properties
+
+
+
+
+

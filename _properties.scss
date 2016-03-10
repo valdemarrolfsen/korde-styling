@@ -69,6 +69,18 @@ Created by Valdemar Rolfsen 2016
   width: 100%;
 }
 
+// Background and Color
+// --------------------
+
+@each $item in $mainColors {
+  .color-#{nth($item, 1)} {
+    color: nth($item, 2);
+  }
+  .bg-#{nth($item, 1)} {
+    background: nth($item, 2);
+  }
+}
+
 // Positioning
 // --------------------
 
