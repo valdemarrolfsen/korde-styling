@@ -11,10 +11,11 @@
 $light:                           #fff !default;
 $stable:                          #f8f8f8 !default;
 $stable_dark:                     #888 !default;
-$accept:                          #23c133 !default;
-$decline:                         #ea3830 !default;
-$action:                          #2abaea !default;
-$warning:                         #ea7807 !default;
+$positive:                        #0098D8 !default;
+$accept:                          #1bbc9b !default;
+$decline:                         #dc4738 !default;
+$action:                          #F77E5E !default;
+$warning:                         #558A86 !default;
 $dark:                            #222 !default;
 
 // List of main colors
@@ -22,6 +23,7 @@ $mainColors: (
         ('light', $light, $dark),
         ('stable', $stable, $dark),
         ('stable_dark', $stable_dark, $light),
+        ('positive', $positive, $light),
         ('accept', $accept, $light),
         ('decline', $decline, $light),
         ('action', $action, $light),

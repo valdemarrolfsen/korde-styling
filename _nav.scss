@@ -5,17 +5,26 @@
 -----------------------------------------*/
 
 //Imports
-$hm-positive: rgb(255, 126, 14);
 
-$hm-nav-height                    : 100px;
-$hm-nav-bg                        : $hm-positive;
+// Local mixins
 
-.hm-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
+@mixin nav-size($h) {
+  height: $h;
+  line-height: $h;
+}
 
-  width: 100%;
-  height: $hm-nav-height;
-  background: $hm-nav-bg;
+
+// Nav bar top
+// -----------------
+
+.nav-sm {
+  @include nav-size($small-nav-height);
+}
+
+.nav-md {
+  @include nav-size($medium-nav-height);
+}
+
+.nav-lg {
+  @include nav-size($large-nav-height);
 }
