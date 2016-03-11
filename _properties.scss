@@ -69,15 +69,42 @@ Created by Valdemar Rolfsen 2016
   width: 100%;
 }
 
-// Background and Color
+// Background, Color and Border
 // --------------------
 
 @each $item in $mainColors {
+
+  // Color options for main colors
   .color-#{nth($item, 1)} {
     color: nth($item, 2);
   }
+
+  // Background options for main colors
   .bg-#{nth($item, 1)} {
     background: nth($item, 2);
+  }
+
+  // Border color options for main colors
+  .border-#{nth($item, 1)} {
+    border-color: nth($item, 2);
+  }
+}
+
+// Border width
+@for $i from 0 to 10 {
+  .border-#{$i} {
+    @extend %solid-border;
+    border-width: #{$i}px;
+  }
+
+  .border-b-#{$i} {
+    @extend %solid-bottom-border;
+    border-bottom-width: #{$i}px;
+  }
+
+  .border-t-#{$i} {
+    @extend %solid-top-border;
+    border-top-width: #{$i}px;
   }
 }
 

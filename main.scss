@@ -6,6 +6,7 @@
 
 @import "variables",
         "mixins",
+        "placeholders",
         "buttons",
         "textstyles",
         "properties",
@@ -17,5 +18,11 @@
 button {
   &:focus {
     outline: none;
+  }
+}
+
+a {
+  &:hover, &:focus, &:active {
+    text-decoration: none;
   }
 }

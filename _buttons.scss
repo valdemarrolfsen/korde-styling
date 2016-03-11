@@ -38,6 +38,7 @@ $button-lg-padding:              15px 60px;
 // Buttons
 // -------------------
 
+// Button sizes
 .button-sm {
   // Mixins
   @include button(5px 20px, 0);
