@@ -14,3 +14,20 @@
 %solid-border { border-style: solid; }
 %solid-bottom-border { border-bottom-style: solid; }
 %solid-top-border { border-top-style: solid; }
+
+
+// Transitions
+// --------------------
+
+%all-trans { @include trans(); }
+
+
+// Layout
+// --------------------
+%is-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}

@@ -1,0 +1,58 @@
+/*----------------------------------------
+
+  KORDE - GRID
+
+-----------------------------------------*/
+
+// Layout
+// -----------------
+.layout-row {
+  -webkit-flex-flow: row wrap;
+
+  // Extends
+  @extend %is-flex;
+}
+
+.layout-col {
+  -webkit-flex-flow: column wrap;
+  // Extends
+  @extend %is-flex;
+}
+
+// Columns & Rows
+// --------------------
+
+/*
+    Decided to use the 12 number system
+*/
+
+@for $i from 1 to 13 {
+  .c-l-#{$i}, .c-m-#{$i}, .c-s-#{$i} {
+    width: 100%/12*$i;
+
+    @include trans($time: 200ms);
+  }
+
+  .c-m-#{$i} {
+    @media (max-width: $smallMediaSize) {
+      width: 100%;
+    }
+  }
+
+  .c-l-#{$i} {
+    @media (max-width: $mediumMediaSize) {
+      width: 100%;
+    }
+  }
+
+  // [REMARK] In order to use row classes the container need to have a set height
+  .r-#{$i} {
+    width: 100%;
+    height: 100%/12*$i;
+  }
+}
+
+// Align properties
+.c-center { align-self:center; }
+.c-end { align-self:flex-end; }
+
