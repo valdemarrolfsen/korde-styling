@@ -17,6 +17,9 @@ $button-lg-padding:              15px 60px;
 
 @mixin button($padding: 10px 40px, $border: 2px solid $light) {
 
+  // Extends
+  @extend %default-button;
+
   // Custom style
   padding: $padding;
   border: $border;
@@ -42,6 +45,7 @@ $button-lg-padding:              15px 60px;
 
 // Button sizes
 .button-sm {
+
   // Mixins
   @include button(5px 20px, 0);
   @include trans(background-color, 200ms);
