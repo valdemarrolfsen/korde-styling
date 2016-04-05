@@ -30,7 +30,7 @@
   .c-l-#{$i}, .c-m-#{$i}, .c-s-#{$i} {
     width: 100%/12*$i;
 
-    @include trans($time: 200ms);
+    @extend %default-column;
   }
 
   .c-m-#{$i} {
