@@ -65,10 +65,10 @@ Created by Valdemar Rolfsen 2016
 @for $i from 1 to 120 {
   .h-#{$i*10} {
     height: #{$i*10}px;
+  }
 
-    .w-#{$i*10} {
-      max-width: #{$i*10}px;
-    }
+  .w-#{$i*10} {
+    max-width: #{$i*10}px;
   }
 }
 
@@ -80,6 +80,11 @@ Created by Valdemar Rolfsen 2016
   .w-#{$i*10}-p {
     width: $i*10%;
   }
+
+  // Cover opacity
+  .cover-#{$i} {
+    opacity: 0.1*$i;
+  }
 }
 
 .h-fill {
@@ -90,7 +95,7 @@ Created by Valdemar Rolfsen 2016
   width: 100%;
 }
 
-// Background, Color and Border
+// Background, Color, Border and Cover
 // --------------------
 
 @each $item in $mainColors {
@@ -109,6 +114,17 @@ Created by Valdemar Rolfsen 2016
   .border-#{nth($item, 1)} {
     border-color: nth($item, 2);
   }
+
+  .cover-#{nth($item, 1)} {
+    @extend %cover;
+    background: nth($item, 2);
+  }
+}
+
+// Other cover
+.cover-content {
+  position: relative;
+  z-index: 1;
 }
 
 // Border width
@@ -175,6 +191,8 @@ Created by Valdemar Rolfsen 2016
 
 // Cover
 // --------------------
+
+
 
 // Mobile
 // --------------------
