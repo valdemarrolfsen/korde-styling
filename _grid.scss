@@ -8,7 +8,6 @@
 // -----------------
 .layout-row {
   -webkit-flex-flow: row wrap;
-
   // Extends
   @extend %is-flex;
 }
@@ -17,6 +16,10 @@
   -webkit-flex-flow: column wrap;
   // Extends
   @extend %is-flex;
+}
+
+.layout-center {
+  justify-content: center;
 }
 
 // Columns & Rows
