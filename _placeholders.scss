@@ -49,10 +49,33 @@
   height: 100%;
 }
 
+// Navbar
+// ---------------------
+%nav-top {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+}
+
+%nav-side {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
 
 // Grid
 // ---------------------
 
 %default-column {
   @include trans($time: 200ms);
+}
+
+// Shapes
+// ---------------------
+
+%is-circle {
+  -webkit-border-radius:100%;
+  -moz-border-radius:100%;
+  border-radius:100%;
 }

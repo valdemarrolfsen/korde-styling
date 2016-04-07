@@ -17,13 +17,57 @@
 // Nav bar top
 // -----------------
 .nav-sm {
-  @include nav-size($small-nav-height);
+  @extend %nav-top;
+  @include nav-size($small-nav-size);
 }
 
 .nav-md {
-  @include nav-size($medium-nav-height);
+  @include nav-size($medium-nav-size);
 }
 
 .nav-lg {
-  @include nav-size($large-nav-height);
+  @include nav-size($large-nav-size);
+}
+
+.nav-with-side {
+  left: 70px;
+}
+
+// Nav bar side
+// -----------------
+
+.nav-side-sm {
+  width: 70px;
+  padding-top: 80px;
+
+  // Extends
+  @extend %nav-side;
+
+  .nav-item {
+    font-size: 18px;
+    text-align: center;
+    color: $light;
+    cursor: pointer;
+
+    @include trans(background-color, 200ms);
+
+    span {
+      line-height: 60px;
+      opacity: 0.6;
+    }
+
+    &:hover {
+      background: lighten($dark, 10%);
+    }
+  }
+
+  .active {
+    span {
+      opacity: 1;
+    }
+  }
+}
+
+.has-nav-side-sm {
+  padding-left: 70px;
 }
