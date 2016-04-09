@@ -112,6 +112,7 @@ Created by Valdemar Rolfsen 2016
   // Background options for main colors
   .bg-#{nth($item, 1)} {
     background: nth($item, 2);
+    color: nth($item, 3);
   }
 
   // Border color options for main colors
