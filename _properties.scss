@@ -95,6 +95,10 @@ Created by Valdemar Rolfsen 2016
   width: 100%;
 }
 
+.h-screen-fill {
+  height: 100vh;
+}
+
 // Background, Color, Border and Cover
 // --------------------
 
@@ -121,6 +125,7 @@ Created by Valdemar Rolfsen 2016
   }
 }
 
+
 // Other cover
 .cover-content {
   position: relative;
@@ -142,6 +147,15 @@ Created by Valdemar Rolfsen 2016
   .border-t-#{$i} {
     @extend %solid-top-border;
     border-top-width: #{$i}px;
+  }
+
+  .border-r-#{$i} {
+    @extend %solid-right-border;
+    border-right-width: #{$i}px;
+  }
+  .border-l-#{$i} {
+    @extend %solid-left-border;
+    border-left-width: #{$i}px;
   }
 }
 
@@ -218,4 +232,14 @@ Created by Valdemar Rolfsen 2016
 
 .overflow-scroll {
   overflow-y: scroll;
+}
+
+// Hover attributes
+// --------------------
+@each $item in $mainColors {
+  .on-hover-color-#{nth($item, 1)} {
+    &:hover {
+      color: nth($item, 2);
+    }
+  }
 }
