@@ -44,6 +44,7 @@
   @extend %nav-side;
 
   .nav-item {
+    position: relative;
     font-size: 18px;
     text-align: center;
     color: $light;
