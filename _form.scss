@@ -7,15 +7,23 @@
 // Inputs
 // --------------------
 
-.plain-input, .plain-select {
+.plain-input, .plain-select, .plain-textarea {
   -webkit-appearance: none;
   width: 100%;
-  height: 40px;
-  padding-left: 15px;
   border: 0;
   border-radius: 0;
 
   &:focus {outline: none;}
+}
+
+.plain-input, .plain-select {
+  height: 40px;
+  padding-left: 15px;
+}
+
+.plain-textarea {
+  padding: 15px;
+  resize: none;
 }
 
 .hidden-input {
