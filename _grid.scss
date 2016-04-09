@@ -23,6 +23,26 @@
   justify-content: center;
 }
 
+.layout-end {
+  justify-content: flex-end;
+}
+
+.layout-center-v {
+  align-items: center;
+}
+
+.layout-end-v {
+  align-items: flex-end;
+}
+
+.test1 {
+  flex: 0 1 auto;
+}
+
+.test2 {
+  flex: 1 1 auto;
+}
+
 // Columns & Rows
 // --------------------
 
