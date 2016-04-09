@@ -81,3 +81,19 @@
   -moz-border-radius:100%;
   border-radius:100%;
 }
+
+// Divider
+// ---------------------
+%divider {
+  width: 100%;
+  height: 1px;
+  border-bottom-style: solid;
+}
+
+// Hover
+// ---------------------
+
+%hover {
+  cursor: pointer;
+  @include trans(background-color, 200ms);
+}

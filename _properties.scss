@@ -99,7 +99,7 @@ Created by Valdemar Rolfsen 2016
   height: 100vh;
 }
 
-// Background, Color, Border and Cover
+// Background, Color, Border, Hover and Cover
 // --------------------
 
 @each $item in $mainColors {
@@ -122,6 +122,14 @@ Created by Valdemar Rolfsen 2016
   .cover-#{nth($item, 1)} {
     @extend %cover;
     background: nth($item, 2);
+  }
+
+  .hover-#{nth($item, 1)} {
+    @extend %hover;
+
+    &:hover {
+      background: darken(nth($item, 2), 5%);
+    }
   }
 }
 

@@ -16,6 +16,19 @@ $footer-height:           40px;
 // Divider
 // --------------------
 
+
+@each $item in $mainColors {
+  .divider-#{nth($item, 1)} {
+    border-bottom-color: nth($item, 2);
+  }
+}
+
+@for $i from 1 to 11 {
+  .divider-#{$i} {
+    @extend %divider;
+    border-bottom-width: $i*1px;
+  }
+}
 .divider {
   width: 100%;
   height: 1px;
