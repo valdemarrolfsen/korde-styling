@@ -11,8 +11,11 @@ Created by Valdemar Rolfsen 2016
 
 @import "variables";
 
-// Mobile headings
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.4em 0;
+}
 
+// Mobile headings
 @media (max-width: $smallMediaSize) {
   h1 {
     font-size: 30px;
