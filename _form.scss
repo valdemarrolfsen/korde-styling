@@ -47,7 +47,7 @@ $blue: rgb(69, 113, 236);
   }
 }
 
-:not(#foo) .styled-checkbox {
+.checkbox {
   position: absolute; // take it out of document flow
   opacity: 0; // hide it
 
@@ -68,12 +68,7 @@ $blue: rgb(69, 113, 236);
   }
 
   &:hover + label:before {
-    background: $highlightColorActive;
     box-shadow: 0 0 0 6px rgba(0,0,0,0.12);
-  }
-
-  &:checked + label:before {
-    background: $highlightColorActive;
   }
 
   // Disabled state
@@ -95,5 +90,18 @@ $blue: rgb(69, 113, 236);
     left: 5px;
     line-height: 20px;
     color: white;
+  }
+}
+
+@each $item in $mainColors {
+  .checkbox-#{nth($item, 1)} {
+    &:hover + label:before {
+      background: nth($item, 2);
+      box-shadow: 0 0 0 6px rgba(0,0,0,0.12);
+    }
+
+    &:checked + label:before {
+      background: nth($item, 2);
+    }
   }
 }
