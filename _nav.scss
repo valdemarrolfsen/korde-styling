@@ -22,11 +22,17 @@
 }
 
 .nav-md {
+  @extend %nav-top;
   @include nav-size($medium-nav-size);
 }
 
 .nav-lg {
+  @extend %nav-top;
   @include nav-size($large-nav-size);
+}
+
+.has-nav-md {
+  padding-top: $medium-nav-size;
 }
 
 .nav-with-side {
