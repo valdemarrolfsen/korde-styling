@@ -30,6 +30,10 @@ $blue: rgb(69, 113, 236);
   padding-left: 15px;
 }
 
+.plain-select {
+  @include trans(background-color, 300ms);
+}
+
 .plain-textarea {
   padding: 15px;
   resize: none;
@@ -62,13 +66,15 @@ $blue: rgb(69, 113, 236);
     margin-right: 10px;
     display: inline-block;
     vertical-align: text-top;
-    background: #A9A5A5;
+    background: #fff;
+    border: 1px solid $stable_dark;
     @include square(20px);
     @include trans();
   }
 
   &:hover + label:before {
     box-shadow: 0 0 0 6px rgba(0,0,0,0.12);
+    border-color: rgba(0,0,0,0);
   }
 
   // Disabled state
@@ -84,10 +90,11 @@ $blue: rgb(69, 113, 236);
 
   // Checkmark. Could be replaced with an image
   &:checked + label:after {
-    content: '\2713';
+    font-family: FontAwesome;
+    content: '\f00c';
     position: absolute;
-    top: 0;
-    left: 5px;
+    top: 1px;
+    left: 4px;
     line-height: 20px;
     color: white;
   }
@@ -102,6 +109,7 @@ $blue: rgb(69, 113, 236);
 
     &:checked + label:before {
       background: nth($item, 2);
+      border-color: rgba(0,0,0,0);
     }
   }
 }
