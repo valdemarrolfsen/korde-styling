@@ -21,6 +21,7 @@ $blue: rgb(69, 113, 236);
   width: 100%;
   border: 0;
   border-radius: 0;
+  font-size: 14px;
 
   &:focus {outline: none;}
 }
@@ -93,7 +94,7 @@ $blue: rgb(69, 113, 236);
     font-family: FontAwesome;
     content: '\f00c';
     position: absolute;
-    top: 1px;
+    top: 0;
     left: 4px;
     line-height: 20px;
     color: white;
