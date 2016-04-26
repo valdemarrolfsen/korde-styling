@@ -55,7 +55,8 @@ Created by Valdemar Rolfsen 2016
 .p-left { padding-right: 0; }
 
 .m-top { margin-bottom: 0; }
-
+.m-right { margin-left: 0;}
+.m-left { margin-right: 0;}
 .m-bottom { margin-top: 0; }
 
 
@@ -182,6 +183,10 @@ Created by Valdemar Rolfsen 2016
 .block-center {
   display: block;
   margin: 0 auto;
+}
+
+.float-right {
+  float: right;
 }
 
 // Shapes
