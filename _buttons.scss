@@ -73,12 +73,13 @@ $button-lg-padding:              15px 60px;
     $color: nth($item, 3);
 
     //Custom style
-    background: nth($item, 2);
-    color: nth($item, 3);
+    background: $bg;
+    color: $color;
+    border: 1px solid $bg;
 
     // Other
-    &:hover { background: lighten($bg, 10%); }
-    &:active { background: darken($bg, 5%);}
+    &:hover { background: lighten($bg, 10%); border-color: lighten($bg, 10%);}
+    &:active { background: darken($bg, 5%); border-color: lighten($bg, 5%);}
   }
 
   // Gradient buttons
