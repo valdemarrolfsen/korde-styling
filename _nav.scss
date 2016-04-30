@@ -57,6 +57,8 @@
     }
   }
 
+  @include trans(all, 400ms);
+
   .nav-item {
     position: relative;
     font-size: 18px;
@@ -81,8 +83,18 @@
       opacity: 1;
     }
   }
+
+  @media (max-width: $smallMediaSize) {
+    left: -70px;
+  }
 }
 
 .has-nav-side-sm {
   padding-left: 70px;
+
+  @include trans(all, 200ms);
+
+  @media (max-width: $smallMediaSize) {
+    padding-left: 0;
+  }
 }
