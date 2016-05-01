@@ -33,6 +33,7 @@ $blue: rgb(69, 113, 236);
 
 .plain-select {
   @include trans(background-color, 300ms);
+  cursor: pointer;
 }
 
 .plain-textarea {
