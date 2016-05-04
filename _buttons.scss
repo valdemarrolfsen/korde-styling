@@ -48,19 +48,19 @@ $button-lg-padding:              15px 60px;
 
   // Mixins
   @include button(5px 20px, 0);
-  @include trans(background-color, 200ms);
+  @include trans(all, 200ms);
 }
 
 .button-md {
   // Mixins
   @include button(10px 40px, 0);
-  @include trans(background-color, 200ms);
+  @include trans(all, 200ms);
 }
 
 .button-lg {
   // Mixins
   @include button(15px 60px, 0);
-  @include trans(background-color, 200ms);
+  @include trans(all, 200ms);
 }
 
 @each $item in $mainColors {
@@ -79,7 +79,7 @@ $button-lg-padding:              15px 60px;
 
     // Other
     &:hover { background: lighten($bg, 10%); border-color: lighten($bg, 10%);}
-    &:active { background: darken($bg, 5%); border-color: lighten($bg, 5%);}
+    &:active { background: darken($bg, 5%); border-color: darken($bg, 5%);}
   }
 
   // Gradient buttons
