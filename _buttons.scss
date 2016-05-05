@@ -91,6 +91,7 @@ $button-lg-padding:              15px 60px;
 
     // Custom style
     color: nth($item, 3);
+    border-radius: 3px;
 
     // Local mixins
     @include grad-down($bg, darken($bg, 10%));
