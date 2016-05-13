@@ -8,6 +8,7 @@
 // -----------------
 .layout-row {
   -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
   width: 100%;
   // Extends
   @extend %is-flex;
@@ -15,6 +16,7 @@
 
 .layout-col {
   -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
   // Extends
   @extend %is-flex;
 }
