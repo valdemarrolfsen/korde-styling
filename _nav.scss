@@ -72,13 +72,34 @@
 
     @include trans(background-color, 200ms);
 
-    span {
+    .item-icon {
       line-height: 60px;
       opacity: 0.6;
     }
 
+    .hover-item {
+      opacity: 0;
+      max-width: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 10px;
+      left: 75px;
+      border-radius: 1337px;
+      white-space: nowrap;
+      background: lighten($dark, 10%);
+      padding: 10px 0;
+
+      @include trans(all, 300ms);
+    }
+
     &:hover {
       background: lighten($dark, 10%);
+
+      .hover-item {
+        opacity: 1;
+        max-width: 500px;
+        padding: 10px 20px;
+      }
     }
   }
 
