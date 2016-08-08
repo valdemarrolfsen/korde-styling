@@ -7,6 +7,7 @@
 // Layout
 // -----------------
 .layout-row {
+  -ms-flex-direction: row;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
   width: 100%;
@@ -15,6 +16,7 @@
 }
 
 .layout-col {
+  -ms-flex-direction: column;
   -webkit-flex-flow: column wrap;
   flex-flow: column wrap;
   // Extends
@@ -22,20 +24,28 @@
 }
 
 .layout-center {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .layout-end {
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
 .layout-center-v {
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .layout-end-v {
+  -ms-flex-align: end;
   align-items: flex-end;
 }
+
 
 .test1 {
   flex: 0 1 auto;
