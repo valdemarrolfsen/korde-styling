@@ -237,9 +237,14 @@ Created by Valdemar Rolfsen 2016
   }
 }
 
-// Lists
+// Shapes
 // --------------------
 
+@for $i from 1 to 11 {
+  .rounded-#{$i} {
+    border-radius: #{$i}px;
+  }
+}
 
 // Overflow
 // --------------------
